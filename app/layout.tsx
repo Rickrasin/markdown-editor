@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Roboto, Roboto_Mono, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
+import MarkdownProvider from "@/context/MarkdownContext";
+import ThemeProvider from "@/Providers/Providers";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -32,11 +34,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${roboto.variable} ${robotoSlab.variable} ${robotoMono.variable} antialiased`}
+        className={`${roboto.variable} ${robotoSlab.variable} ${robotoMono.variable} antialiased `}
       >
-        <Layout>{children}</Layout>
+        <ThemeProvider>
+          <MarkdownProvider>
+            <Layout>{children}</Layout>
+          </MarkdownProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

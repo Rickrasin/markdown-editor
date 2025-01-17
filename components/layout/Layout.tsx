@@ -12,7 +12,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   return (
-    <div className="flex h-full overflow-x-hidden">
+    <div className="flex h-screen overflow-x-hidden overflow-y-hidden ">
       <Sidebar isOpen={isSidebarOpen} />
       <motion.div
         key={"Page"}
@@ -22,10 +22,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             ? { x: 250, transition: { duration: 0.5 } }
             : { x: 0, transition: { duration: 0.5 } }
         }
-        className="w-full "
+        className="w-full"
       >
-        <Header toggleHeader={toggleSidebar} isOpen={isSidebarOpen} />
-        <main className="p-6">{children}</main>
+        <main className="flex flex-col w-full h-full">
+          <Header toggleHeader={toggleSidebar} isOpen={isSidebarOpen} />
+          {children}
+        </main>
       </motion.div>
     </div>
   );

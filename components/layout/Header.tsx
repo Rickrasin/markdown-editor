@@ -16,9 +16,9 @@ const Header: React.FC<HeaderProps> = ({ toggleHeader, isOpen }) => {
           {!isOpen ? (
             <motion.div
               key="menu"
-              initial={{ opacity: 0, rotate: -180 }}
+              initial={{ opacity: 0, rotate: 180 }}
               animate={{ opacity: 1, rotate: 0 }}
-              exit={{ opacity: 0, rotate: 180, transition: { duration: 0 } }}
+              exit={{ opacity: 0, rotate: -180, transition: { duration: 0 } }}
               transition={{ duration: 0.5 }}
             >
               <Image
