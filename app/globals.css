@@ -116,11 +116,11 @@ a {
 }
 
 .markdown blockquote {
-  @apply border-solid border-orange border-l-4 border-y-0 border-r-0 p-4 my-4 mx-0 rounded-[4px] bg-color-200 text-color-700 dark:bg-color-800 dark:text-color-100;
+  @apply border-solid border-orange border-l-4 border-y-0 border-r-0 p-4 my-4 mx-0 rounded-[4px] dark:bg-color-800 bg-color-200;
 }
 
 .markdown blockquote p {
-  @apply font-slab leading-6 font-bold text-color-700;
+  @apply font-slab leading-6 font-bold  text-color-700 dark:text-color-100;
 }
 
 .markdown blockquote a {
