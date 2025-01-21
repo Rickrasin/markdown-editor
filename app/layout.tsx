@@ -14,7 +14,7 @@ const roboto = Roboto({
 const robotoSlab = Roboto_Slab({
   variable: "--roboto-slab",
   subsets: ["latin"],
-  weight: ["300", "700"]
+  weight: ["300", "400", "700"]
 });
 
 const robotoMono = Roboto_Mono({

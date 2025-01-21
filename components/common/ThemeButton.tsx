@@ -14,7 +14,13 @@ const ThemeToggle = () => {
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => {
+        setTheme(theme === "dark" ? "light" : "dark");
+        window.localStorage.setItem(
+          "theme",
+          theme === "dark" ? "dark" : "light"
+        ); // or "light"
+      }}
       className="p-2 bg-gray-200 dark:bg-gray-800 rounded"
     >
       {theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}

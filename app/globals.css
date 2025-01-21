@@ -23,10 +23,6 @@ body {
   @apply h-screen w-screen m-0 p-0;
 }
 
-.ProseMirror-focused {
-  outline: none;
-}
-
 .heading-M {
   @apply font-roboto font-normal text-[15px];
 }
@@ -65,6 +61,78 @@ h6 {
 
 p {
   @apply leading-6;
+}
+
+a {
+  @apply underline;
+}
+
+.markdown * {
+  @apply duration-300;
+}
+
+.markdown {
+  @apply font-roboto font-light text-[16px] leading-8;
+}
+
+.markdown h1 {
+  @apply font-slab font-bold text-[32px] dark:text-color-100;
+}
+
+.markdown h2 {
+  @apply font-slab font-light text-[28px] dark:text-color-100;
+}
+
+.markdown h3 {
+  @apply font-slab font-bold text-2xl dark:text-color-100;
+}
+
+.markdown h4 {
+  @apply font-slab font-bold text-xl dark:text-color-100;
+}
+
+.markdown h5 {
+  @apply font-slab font-bold text-base dark:text-color-100;
+}
+
+.markdown h6 {
+  @apply font-slab font-bold text-sm text-orange;
+}
+
+.markdown p {
+  @apply leading-6 font-slab text-sm text-color-500 dark:text-color-400 font-normal;
+}
+
+.markdown ol {
+  @apply leading-6 font-slab text-sm text-color-500 font-normal;
+}
+
+.markdown li {
+  @apply leading-6 font-slab text-sm text-color-500 font-normal;
+}
+
+.markdown ul li::marker {
+  @apply text-orange;
+}
+
+.markdown blockquote {
+  @apply border-solid border-orange border-l-4 border-y-0 border-r-0 p-4 my-4 mx-0 rounded-[4px] bg-color-200 text-color-700 dark:bg-color-800 dark:text-color-100;
+}
+
+.markdown blockquote p {
+  @apply font-slab leading-6 font-bold text-color-700;
+}
+
+.markdown blockquote a {
+  @apply underline;
+}
+
+.markdown pre {
+  @apply font-mono font-normal text-sm bg-color-200 text-color-700 dark:bg-color-700 dark:text-color-100 rounded-[4px] p-6;
+}
+
+.markdown > * {
+  all: revert;
 }
 
 .markdown-code {
